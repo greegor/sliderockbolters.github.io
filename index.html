@@ -26,7 +26,10 @@
       $.ajax({
         url: "https://formspree.io//myywqqzy",
         method: "POST",
-        data: {message: $("#message").val(), from: $("#_replyto").val()},
+        data: {message: $("#message").val(), 
+               _replyto: $("#_replyto").val(), 
+               _cc: "greg@softwareodyssey.com",
+               _subject: "Message from Slide-Rock Bolters website"},
         dataType: "json",
         cache: false,
         success: function() {
