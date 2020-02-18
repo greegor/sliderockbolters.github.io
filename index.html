@@ -17,7 +17,7 @@
 
   <!-- your other form fields go here -->
 
-  <button id="sendbtn" type="submit">Send</button>
+  <button id="sendbtn" type="button">Send</button>
 </form>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
@@ -26,8 +26,15 @@
       $.ajax({
         url: "https://formspree.io//myywqqzy",
         method: "POST",
-        data: {message: $("#message"), from: $("#_replyto")},
-        dataType: "json"
+        data: {message: $("#message").val(), from: $("#_replyto").val()},
+        dataType: "json",
+        cache: false,
+        success: function() {
+          alert("success");
+        },
+        error: function() {
+           alert("error");
+      }
       });
     });
   </script>
