@@ -4,22 +4,32 @@
 <h3>Hello World!</h3>
 <!-- modify this form HTML and place wherever you want your form -->
 
-<form
-  action="https://formspree.io/myywqqzy"
-  method="POST"
->
+<!-- <form action="https://formspree.io/myywqqzy"  method="POST"> -->
+<form action=""  method="POST">
   <label>
     Your email:
-    <input type="text" name="_replyto">
+    <input type="text" id="_replyto" name="_replyto">
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea id="message" name="message"></textarea>
   </label>
 
   <!-- your other form fields go here -->
 
-  <button type="submit">Send</button>
-</form>  
+  <button id="sendbtn" type="submit">Send</button>
+</form>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <script>
+    $("#sendbtn").on("click", function() {
+      $.ajax({
+        url: "https://formspree.io//myywqqzy",
+        method: "POST",
+        data: {message: $("#message"), from: $("#_replyto")},
+        dataType: "json"
+      });
+    });
+  </script>
 </body
 </html>
