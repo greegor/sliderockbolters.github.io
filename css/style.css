@@ -208,8 +208,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 40px;
 }
 header .intro-text {
-	padding-top: 250px;
-	padding-bottom: 200px;
+	/*padding-top: 250px;*/
+	padding-top: 10px;
+	/*padding-bottom: 200px;*/
+	padding-bottom: 350px;
 	text-align: center;
 }
 
