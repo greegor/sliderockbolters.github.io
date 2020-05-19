@@ -191,7 +191,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro h1 {
 	font-family: 'Galada', cursive;
 	color: #fff;
-	font-size: 10em;
+	font-size: 4em;
 	font-weight: 400;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -214,6 +214,24 @@ header .intro-text {
 	padding-bottom: 350px;
 	text-align: center;
 }
+
+.intro-text iframe {
+	width: 840px;
+	height: 472px;
+}
+@media screen and (max-width: 600px) {
+	#menu a.navbar-brand {
+		font-size: 2em;
+	}
+	.intro h1 {
+		font-size: 2em;
+	}
+	.intro-text iframe {
+		width: 450px;
+		height: 240px;
+	}
+}
+
 
 /* About Section */
 #about {
@@ -427,6 +445,8 @@ ol.type li a:hover {
 /* 
 #team {
 	color: #fff;
+	height:800px; 
+	overflow: hidden;	
 	background: #444 url(../img/team-bg.jpg) center top no-repeat fixed;
 	background-size: cover;
 }
@@ -482,8 +502,15 @@ ol.type li a:hover {
 */
 #team {
 	color: #000;
+	min-height:800px; 
+	overflow: hidden;	
 	background: #fff center top no-repeat fixed;
 	background-size: cover;
+}
+@media screen and (max-width: 600px) {
+	#team {
+		min-height:1800px; 
+	}
 }
 
 /* Call Reservation Section */
